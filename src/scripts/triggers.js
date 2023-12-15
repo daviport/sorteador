@@ -13,10 +13,25 @@ formRegister.addEventListener("submit",(e)=>{
     const newFriend = {
         name: friendName,
         password: friendPassword,
-        id: "",
+        id: generateUniqueId(),
         myFriend:""
     }
 
     console.info("newFriend",newFriend)
 
+    friendsRegistered.push(newFriend);
+
+    formRegister.reset();
+
+    const elevenDots = "•••••••••••" 
+    //const newFriendNameWithDots = newFriend.name.replaceAll(/./g,"•") In case you wanna use regex;
+    
+    const friendElement = `<p class="friendListItem">${elevenDots} </p>`
+
+    listFriends.innerHTML += friendElement;
+
+    if(friendsRegistered.length>1){
+        sortButton.style.display = "block";
+    }
+    
 })

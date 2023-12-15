@@ -55,3 +55,7 @@ button{
 .sortButtonStyle{
     display: none;
 }
+
+.registeredFriendStyle{
+    color: black;
+}
