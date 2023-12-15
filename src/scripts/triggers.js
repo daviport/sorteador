@@ -17,8 +17,6 @@ formRegister.addEventListener("submit",(e)=>{
         myFriend:""
     }
 
-    console.info("newFriend",newFriend)
-
     friendsRegistered.push(newFriend);
 
     formRegister.reset();
@@ -34,4 +32,10 @@ formRegister.addEventListener("submit",(e)=>{
         sortButton.style.display = "block";
     }
     
+})
+
+sortButton.addEventListener("click", ()=>{
+    const result = sortFriends(friendsRegistered)
+    console.info(friendsRegistered)
+  
 })
